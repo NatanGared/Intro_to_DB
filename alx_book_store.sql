@@ -26,12 +26,12 @@ CREATE TABLE Orders
     order_date DATE NOT NULL,
     FOREIGN KEY (customer_id) REFERENCES Customers(customer_id)
 );
-CREATE TABLE Orders_Details
+CREATE TABLE Order_Details
 (
     orderdetailid (Primary Key),
     order_id INT,
     book_id INT,
-    quantity DOUBLE
+    quantity DOUBLE,
     FOREIGN KEY (order_id) REFERENCES Orders(order_id),
     FOREIGN KEY (book_id) REFERENCES Books(book_id)
 )
