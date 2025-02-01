@@ -12,7 +12,7 @@ def create_database():
             mycursor = mydb.cursor()
 
             # Create database if it doesn't exist
-            mycursor.execute(f"CREATE DATABASE IF NOT EXISTS alx_book_store")
+            mycursor.execute("CREATE DATABASE IF NOT EXISTS alx_book_store")
             print(f"Database alx_book_store created successfully!")
 
     except mysql.connector.Error as e:
