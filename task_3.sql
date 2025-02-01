@@ -1,2 +1,2 @@
-mycursor.execute("USE alx_book_store;")
-mycursor.execute("SHOW TABLES")
+USE alx_book_store;
+SHOW TABLES
