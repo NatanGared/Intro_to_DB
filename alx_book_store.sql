@@ -1,4 +1,4 @@
-CREATE DATABASE alx_book_store;
+CREATE DATABASE IF NOT EXISTS alx_book_store;
 CREATE TABLE Books
 (
     book_id INT PRIMARY KEY,
@@ -22,7 +22,7 @@ CREATE TABLE Customers
 CREATE TABLE Orders
 (
     order_id (Primary Key),
-    customer_id (Foreign Key referencing Customers table) NOT NULL,
+    customer_id INT,
     order_date DATE NOT NULL,
     FOREIGN KEY (customer_id) REFERENCES Customers(customer_id)
 );
