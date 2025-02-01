@@ -17,7 +17,7 @@ CREATE TABLE Customers
     customer_id (Primary Key),
     customer_name VARCHAR(215) NOT NULL,
     email VARCHAR(215) NOT NULL,
-    `address` TEXT NOT NULL
+    address TEXT NOT NULL
 );
 CREATE TABLE Orders
 (
