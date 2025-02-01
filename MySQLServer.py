@@ -1,6 +1,6 @@
 import mysql.connector
 
-def create_database(db_name):
+def create_database():
     try:
         mydb = mysql.connector.connect(
             host='localhost',
@@ -12,8 +12,8 @@ def create_database(db_name):
             mycursor = mydb.cursor()
 
             # Create database if it doesn't exist
-            mycursor.execute(f"CREATE DATABASE IF NOT EXISTS {db_name};")
-            print(f"Database '{db_name}' created successfully!")
+            mycursor.execute(f"CREATE DATABASE IF NOT EXISTS alx_book_store")
+            print(f"Database alx_book_store created successfully!")
 
     except Exception as e:
         print(f"Error: {e}")
@@ -22,4 +22,4 @@ def create_database(db_name):
             mycursor.close()
             mydb.close()
 
-create_database("alx_book_store")
+create_database()
